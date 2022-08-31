@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'montserrat': ['Montserrat'],
+        'la-belle-aurore': ['La Belle Aurore'],
+        'roboto': ['Roboto']
+      }
+    },
   },
   plugins: [],
 }
