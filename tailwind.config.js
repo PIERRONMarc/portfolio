@@ -17,7 +17,8 @@ module.exports = {
         'html-tag': '#515151'
       },
       backgroundColor: {
-        'primary': '#1D1D1D'
+        'primary': '#1D1D1D',
+        'secondary': '#2D2D2D'
       }
     },
   },

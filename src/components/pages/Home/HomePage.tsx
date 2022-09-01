@@ -1,4 +1,5 @@
 import Hero from "../../molecules/Hero/Hero";
+import Skills from "../../molecules/Skills/Skills";
 
 function HomePage() {
     return (
@@ -6,6 +7,9 @@ function HomePage() {
             <header>
                 <Hero />
             </header>
+            <main>
+                <Skills />
+            </main>
         </>
 
     )
