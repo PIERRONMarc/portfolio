@@ -1,6 +1,6 @@
 import Hero from "../../molecules/Hero/Hero";
 import Skills from "../../molecules/Skills/Skills";
-import TiltedSection from "../../molecules/TiltedSection/TiltedSection";
+import TiltedSection from "../../atoms/TiltedSection/TiltedSection";
 import AboutMe from "../../atoms/AboutMe/AboutMe";
 import Quote from "../../atoms/Quote/Quote";
 
