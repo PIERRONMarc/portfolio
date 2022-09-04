@@ -12,10 +12,10 @@ function Footer(props: FooterProps) {
     return (
         <footer className={`flex flex-col sm:flex-row sm:items-end sm:justify-between ${className}`}>
             <div className="ml-5 text-secondary text-5xl sm:text-7xl flex flex-row items-end sm:order-3">
-                <a href="https://www.linkedin.com/in/marc-pierron" target="_blank" className="mr-5 hover:text-accent ease-in duration-150">
+                <a href="https://www.linkedin.com/in/marc-pierron" target="_blank" className="mr-5 hover:text-accent ease-in duration-150" rel="noreferrer">
                     <FaLinkedin />
                 </a>
-                <a href="https://github.com/PIERRONMarc" target="_blank" className="hover:text-accent ease-in duration-150">
+                <a href="https://github.com/PIERRONMarc" target="_blank" className="hover:text-accent ease-in duration-150" rel="noreferrer" >
                     <FaGithubSquare />
                 </a>
             </div>
