@@ -1,4 +1,4 @@
-import Hero from "../../molecules/Hero/Hero";
+import Header from "../../molecules/Header/Header";
 import Skills from "../../molecules/Skills/Skills";
 import TiltedSection from "../../atoms/TiltedSection/TiltedSection";
 import AboutMe from "../../atoms/AboutMe/AboutMe";
@@ -9,11 +9,9 @@ import Footer from "../../molecules/Foot/Footer";
 function HomePage() {
     return (
         <>
-            <header>
-                <div className="container mx-auto px-4 sm:px-0">
-                    <Hero />
-                </div>
-            </header>
+            <div className="container mx-auto px-4 sm:px-0">
+                <Header />
+            </div>
             <main>
                 <div className="container mx-auto px-4 sm:px-0">
                     <Skills />

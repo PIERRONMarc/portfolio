@@ -1,9 +1,9 @@
 import HtmlTag from "../../atoms/HtmlTag/HtmlTag";
 import {HiOutlineArrowNarrowDown} from "react-icons/hi";
 
-function Hero() {
+function Header() {
     return (
-        <section className="flex flex-col justify-between h-screen">
+        <header className="flex flex-col justify-between h-screen">
             <div className="pt-5">
                 <HtmlTag className="block">&lt;html&gt;</HtmlTag>
                 <HtmlTag className="ml-5">&lt;body&gt;</HtmlTag>
@@ -18,8 +18,8 @@ function Hero() {
                 <div>T-shaped ?</div>
                 <HiOutlineArrowNarrowDown className="m-2"/>
             </div>
-        </section>
+        </header>
     )
 }
 
-export default Hero;
+export default Header;
