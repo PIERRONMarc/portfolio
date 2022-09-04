@@ -3,6 +3,7 @@ import Skills from "../../molecules/Skills/Skills";
 import TiltedSection from "../../atoms/TiltedSection/TiltedSection";
 import AboutMe from "../../atoms/AboutMe/AboutMe";
 import Quote from "../../atoms/Quote/Quote";
+import MyWork from "../../molecules/MyWork/MyWork";
 
 function HomePage() {
     return (
@@ -20,6 +21,9 @@ function HomePage() {
                     <AboutMe className="mb-3 sm:mb-5"/>
                     <Quote />
                 </TiltedSection>
+                <div className="container mx-auto px-4 sm:px-0">
+                    <MyWork className="mt-12" />
+                </div>
             </main>
         </>
 
