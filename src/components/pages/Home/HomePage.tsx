@@ -4,6 +4,7 @@ import TiltedSection from "../../atoms/TiltedSection/TiltedSection";
 import AboutMe from "../../atoms/AboutMe/AboutMe";
 import Quote from "../../atoms/Quote/Quote";
 import MyWork from "../../molecules/MyWork/MyWork";
+import Footer from "../../molecules/Foot/Footer";
 
 function HomePage() {
     return (
@@ -25,6 +26,9 @@ function HomePage() {
                     <MyWork className="mt-12" />
                 </div>
             </main>
+            <div className="container mx-auto px-4 sm:px-0">
+                <Footer className="my-5" />
+            </div>
         </>
 
     )
