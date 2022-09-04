@@ -4,7 +4,7 @@ import TiltedSection from "../../atoms/TiltedSection/TiltedSection";
 import AboutMe from "../../atoms/AboutMe/AboutMe";
 import Quote from "../../atoms/Quote/Quote";
 import MyWork from "../../molecules/MyWork/MyWork";
-import Footer from "../../molecules/Foot/Footer";
+import Footer from "../../molecules/Footer/Footer";
 
 function HomePage() {
     return (
