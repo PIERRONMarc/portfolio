@@ -1,77 +1,57 @@
 import ProjectItem from "../../atoms/ProjectItem/ProjectItem";
+import {useEffect, useState} from "react";
+import ProjectPreview from "../../atoms/ProjectPreview/ProjectPreview";
+import {Project, projects} from "./ProjectsData";
+
+const useMousePosition = () => {
+    const [mousePosition, setMousePosition] = useState<{x: number, y:number}>({x: 0, y: 0})
+
+    useEffect(() => {
+        const updateMousePosition = (event:any)  => {
+            setMousePosition({x: event.clientX, y: event.clientY});
+        }
+        window.addEventListener('mousemove', updateMousePosition);
+
+        return () => window.removeEventListener('mousemove', updateMousePosition);
+    }, [])
+
+    return mousePosition;
+}
+
 
 function ProjectList() {
+    const [hoveredProject, setHoveredProject] = useState<number>(-1);
+    const {x, y} = useMousePosition();
+
     return (
-        <div className="text-primary font-montserrat font-extrabold mt-5 divide-y divide-white">
-            <ProjectItem
-                title="ALOHA"
-                year="2022"
-                category="Work"
-                tags={[
-                'Mockup integration',
-                'PostgreSQL',
-                '#Responsive',
-                'Mockup & Prototype',
-                'Symfony',
-                'Database architecture design'
-            ]}/>
-            <ProjectItem
-                title="LABBOITE"
-                year="2020"
-                category="School"
-                tags={[
-                'Symfony',
-                'Mockup integration',
-                'MySQL',
-                'Database architecture design',
-                'Docker',
-                '#Responsive',
-            ]} />
-            <ProjectItem
-                title="MUSIC'ALL"
-                year="2022"
-                category="Personal"
-                tags={[
-                'Symfony',
-                'API REST',
-                'MongoDB',
-                'Database architecture design',
-                'Docker',
-                'Continuous Integration',
-                'Mockup',
-                'Mockup integration',
-                'React',
-                '#Responsive',
-                '#MobileFirst',
-                'Atomic design',
-                '#TDD'
-            ]} />
-            <ProjectItem
-                title="Réserve ta caisse"
-                year="2021"
-                category="Work"
-                tags={[
-                'Symfony',
-                'API REST',
-                'React Native',
-                'Database architecture design',
-                'MySQL'
-            ]} />
-            <ProjectItem
-                title="Open API document generator"
-                year="2022"
-                category="School"
-                tags={[
-                'Symfony',
-                'Docker',
-                'Message queues',
-                'Infrastructure as code',
-                'Cloud (AWS)',
-                '#TDD',
-                'Continuous integration',
-                'MySQL',
-                'System design'
-            ]} />
+        <div>
+            <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
+                {projects.map((project: Project, index:number) => {
+                    if (index === hoveredProject) {
+                        return (
+                            <ProjectPreview
+                                mousePosition={{x, y}}
+                                key={index}
+                                url={project.preview}
+                            />
+                        )
+                    }
+                })}
+            </div>
+
+            <div className="text-primary font-montserrat font-extrabold mt-5 divide-y divide-white">
+                {projects.map((project: Project, index: number) => (
+                    <ProjectItem
+                        title={project.title}
+                        year={project.year}
+                        category={project.category}
+                        setHoveredProject={setHoveredProject}
+                        index={index}
+                        tags={project.tags}
+                        key={index}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

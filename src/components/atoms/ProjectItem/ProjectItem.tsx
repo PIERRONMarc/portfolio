@@ -1,13 +1,17 @@
+import {Dispatch, SetStateAction} from "react";
+
 interface ProjectItemProps {
     title: string,
     year: string,
     category: 'Personal' | 'Work' | 'School',
-    tags?: string[]
+    tags?: string[],
+    setHoveredProject: Dispatch<SetStateAction<number>>,
+    index: number
 }
 
 function ProjectItem(props: ProjectItemProps) {
 
-    const {title, tags, year, category} = props;
+    const {title, tags, year, category, setHoveredProject, index} = props;
 
     return (
         <div className="py-5 flex flex-col md:py-8">
@@ -16,7 +20,11 @@ function ProjectItem(props: ProjectItemProps) {
                     {year}. <span className="text-accent">{category}</span>
                 </div>
 
-                <div className="text-5xl md:text-7xl">
+                <div
+                    className="text-5xl md:text-7xl cursor-pointer"
+                    onMouseEnter={() => setHoveredProject(index)}
+                    onMouseLeave={() => setHoveredProject(-1)}
+                >
                     {title}
                 </div>
             </div>
