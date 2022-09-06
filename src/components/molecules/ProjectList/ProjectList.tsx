@@ -1,7 +1,7 @@
 import ProjectItem from "../../atoms/ProjectItem/ProjectItem";
 import {useEffect, useState} from "react";
 import ProjectPreview from "../../atoms/ProjectPreview/ProjectPreview";
-import {Project, projects} from "./ProjectsData";
+import {Project, projects} from "../../../utils/Projects";
 
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = useState<{x: number, y:number}>({x: 0, y: 0})
@@ -49,6 +49,7 @@ function ProjectList() {
                         index={index}
                         tags={project.tags}
                         key={index}
+                        uri={project.uri}
                     />
                 ))}
             </div>

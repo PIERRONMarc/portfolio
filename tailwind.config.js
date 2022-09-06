@@ -18,7 +18,8 @@ module.exports = {
       },
       backgroundColor: {
         'primary': '#1D1D1D',
-        'secondary': '#2D2D2D'
+        'secondary': '#2D2D2D',
+        'accent': '#F56F36',
       }
     },
   },

@@ -1,14 +1,20 @@
-import labboitePreview from './assets/labboite.png';
+import imageComingSoon from '../assets/image-coming-soon.png';
 
 export interface Project {
     title: string,
-    tags?: string[],
     year: string,
     category: 'Work'|'Personal'|'School',
-    preview: string
+    preview: string,
+    screens: string[],
+    description: string,
+    tags?: string[],
+    codeLink?: string,
+    seeMoreLink?: string,
+    uri: string
 }
 
 export const projects: Project[] = [{
+    uri: 'aloha',
     title: 'ALOHA',
     year: '2022',
     category: 'Work',
@@ -20,8 +26,13 @@ export const projects: Project[] = [{
         'Symfony',
         'Database architecture design'
     ],
-    preview: labboitePreview
+    preview: imageComingSoon,
+    screens: [
+        imageComingSoon
+    ],
+    description: 'Description coming soon'
 }, {
+    uri: 'labboite',
     title: 'LABBOITE',
     year: '2020',
     category: 'School',
@@ -33,8 +44,15 @@ export const projects: Project[] = [{
         'Docker',
         '#Responsive',
     ],
-    preview: labboitePreview
+    preview: imageComingSoon,
+    screens: [
+        imageComingSoon,
+        imageComingSoon,
+    ],
+    description: 'A website to list and present machines, tools and softwares available in LabBoîte, fablab of Cergy-Pontoise.',
+    codeLink: 'https://github.com/PIERRONMarc/labboite-documentation',
 }, {
+    uri: 'music-all',
     title: "MUSIC'ALL",
     year: '2022',
     category: 'Personal',
@@ -53,8 +71,14 @@ export const projects: Project[] = [{
         'Atomic design',
         '#TDD'
     ],
-    preview: labboitePreview
+    preview: imageComingSoon,
+    screens: [
+        imageComingSoon
+    ],
+    description: "Music'all is a social platform allowing people to listen music together.",
+    codeLink: 'https://github.com/PIERRONMarc/music-all/tree/develop'
 }, {
+    uri: 'reserve-ta-caisse',
     title: 'Réserve ta caisse',
     year: '2021',
     category: 'Work',
@@ -65,8 +89,15 @@ export const projects: Project[] = [{
         'Database architecture design',
         'MySQL'
     ],
-    preview: labboitePreview
+    preview: imageComingSoon,
+    screens: [
+        imageComingSoon
+    ],
+    description: '"Réserve ta caisse" helps CPAM employees with their travel.',
+    seeMoreLink: 'https://reservetacaisse.cpam-versailles.fr/documentation/'
+
 }, {
+    uri: 'open-api-document-generator',
     title: 'Open API document generator',
     year: '2022',
     category: 'School',
@@ -81,5 +112,10 @@ export const projects: Project[] = [{
         'MySQL',
         'System design'
     ],
-    preview: labboitePreview
+    preview: imageComingSoon,
+    screens: [
+        imageComingSoon
+    ],
+    description: 'A Symfony worker that generates OpenAPI documents based on the 3.0 OpenAPI specification.',
+    codeLink: 'https://github.com/PIERRONMarc/openapi-document-generator'
 }]

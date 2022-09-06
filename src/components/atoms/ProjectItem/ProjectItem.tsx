@@ -1,4 +1,5 @@
 import {Dispatch, SetStateAction} from "react";
+import {Link} from "react-router-dom";
 
 interface ProjectItemProps {
     title: string,
@@ -6,12 +7,13 @@ interface ProjectItemProps {
     category: 'Personal' | 'Work' | 'School',
     tags?: string[],
     setHoveredProject: Dispatch<SetStateAction<number>>,
-    index: number
+    index: number,
+    uri: string
 }
 
 function ProjectItem(props: ProjectItemProps) {
 
-    const {title, tags, year, category, setHoveredProject, index} = props;
+    const {title, tags, year, category, setHoveredProject, index, uri} = props;
 
     return (
         <div className="py-5 flex flex-col md:py-8">
@@ -25,7 +27,7 @@ function ProjectItem(props: ProjectItemProps) {
                     onMouseEnter={() => setHoveredProject(index)}
                     onMouseLeave={() => setHoveredProject(-1)}
                 >
-                    {title}
+                    <Link to={uri} >{title}</Link>
                 </div>
             </div>
 
