@@ -1,13 +1,12 @@
-import HtmlTag from "../../atoms/HtmlTag/HtmlTag";
 import Footer from "../../molecules/Footer/Footer";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination, Keyboard} from "swiper";
 import {useEffect} from "react";
 import {Project} from "../../../utils/Projects";
-import {Link} from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Header from "../../molecules/Header/Header";
 
 interface ProjectPageProps {
     project: Project
@@ -25,15 +24,7 @@ function ProjectPage(props: ProjectPageProps) {
     return (
         <>
             <div className="container mx-auto px-4 sm:px-0">
-                <header className="flex flex-row justify-between">
-                    <div className="pt-5">
-                        <HtmlTag className="block">&lt;html&gt;</HtmlTag>
-                        <HtmlTag className="ml-5">&lt;body&gt;</HtmlTag>
-                    </div>
-                    <div className="mt-5">
-                        <Link to="/" className="text-primary font-montserrat underline hover:no-underline hover:text-accent ease-in duration-150">Home</Link>
-                    </div>
-                </header>
+                <Header showHomeLink={true} />
                 <main>
                     <div className="text-primary flex flex-col md:flex-row md:items-start mt-10 mb-2">
                         <div className="font-roboto font-thin text-sm md:order-2 md:pt-1 md:ml-2 pl-1 md:pl-0">
