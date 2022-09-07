@@ -3,10 +3,11 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination, Keyboard} from "swiper";
 import {useEffect} from "react";
 import {Project} from "../../../utils/Projects";
+import Header from "../../molecules/Header/Header";
+import TagList from "../../molecules/TagList/TagList";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Header from "../../molecules/Header/Header";
 
 interface ProjectPageProps {
     project: Project
@@ -36,13 +37,9 @@ function ProjectPage(props: ProjectPageProps) {
                         </div>
                     </div>
 
-                    <div className="flex flex-row justify-start flex-wrap mb-10">
-                        {tags?.map((tag: string, key: number) => (
-                            <div key={key} className="text-primary text-xs rounded-full bg-secondary inline-block px-4 py-2 mr-2 whitespace-nowrap mb-2">
-                                {tag}
-                            </div>
-                        ))}
-                    </div>
+                    {tags && (
+                        <TagList tags={tags} className="mb-10" />
+                    )}
 
                     <p className="text-primary mb-10">{description}</p>
 

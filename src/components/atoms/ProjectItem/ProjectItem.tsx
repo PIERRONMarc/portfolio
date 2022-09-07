@@ -1,5 +1,6 @@
 import {Dispatch, SetStateAction} from "react";
 import {Link} from "react-router-dom";
+import TagList from "../../molecules/TagList/TagList";
 
 interface ProjectItemProps {
     title: string,
@@ -31,13 +32,9 @@ function ProjectItem(props: ProjectItemProps) {
                 </div>
             </div>
 
-            <div className="flex flex-row justify-start flex-wrap mt-4">
-                {tags?.map((tag: string, key: number) => (
-                    <div key={key} className="text-xs rounded-full bg-secondary inline-block px-4 py-2 mr-2 whitespace-nowrap mb-2">
-                        {tag}
-                    </div>
-                ))}
-            </div>
+            {tags && (
+                <TagList tags={tags} className="mt-4" />
+            )}
 
         </div>
     )
