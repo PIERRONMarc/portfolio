@@ -25,7 +25,7 @@ function Skills() {
                         <td className="p-3">Infrastructure as code (Terraform)</td>
                         <td className="p-3 bg-secondary pl-5 pr-5">API REST</td>
                         <td className="p-3">Atomic design</td>
-                        <td className="p-3">System design</td>
+                        <td className="p-3"></td>
                     </tr>
                     <tr>
                         <td className="p-3">#Responsive</td>
@@ -35,7 +35,7 @@ function Skills() {
                     <tr>
                         <td className="p-3">#MobileFirst</td>
                         <td className="p-3">Cloud (AWS)</td>
-                        <td className="p-3 bg-secondary pl-5 pr-5">Message queues</td>
+                        <td className="p-3 bg-secondary pl-5 pr-5">Message broker</td>
                     </tr>
                     <tr>
                         <td className="p-3"></td>
