@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
 import HomePage from "./components/pages/Home/HomePage";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import ProjectPage from "./components/pages/Project/ProjectPage";
 import {Project, projects} from "./utils/Projects";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename="/">
         <Routes>
             <Route path="/" element={<HomePage />} />
             {projects.map((project: Project, key: number) => (
@@ -18,7 +18,7 @@ function App() {
                 />
             ))}
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
