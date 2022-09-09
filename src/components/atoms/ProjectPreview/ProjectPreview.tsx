@@ -21,7 +21,7 @@ function ProjectPreview(props: MediaProps) {
         <img
             onLoad={onImgLoad}
             src={url}
-            className="absolute w-2/3 md:w-1/2 xl:w-1/3 h-auto"
+            className="absolute h-auto max-w-md max-h-96"
             style={{transform: `translate(${mousePosition.x - width/2}px, ${mousePosition.y - height/2}px)`}}
             alt="project preview"
         />

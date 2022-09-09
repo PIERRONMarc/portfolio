@@ -65,7 +65,7 @@ function ProjectPage(props: ProjectPageProps) {
                         className="mb-10"
                     >
                         {screens.map((screen: string, key: number) => (
-                            <SwiperSlide key={key}><img src={screen} alt="project screen"/></SwiperSlide>
+                            <SwiperSlide key={key}><img src={screen} alt="project screen" className="mx-auto" style={{maxWidth: '100%', maxHeight: '80vh'}}/></SwiperSlide>
                         ))}
                     </Swiper>
                 </main>
