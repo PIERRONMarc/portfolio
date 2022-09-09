@@ -1,4 +1,13 @@
 import imageComingSoon from '../assets/image-coming-soon.png';
+import {
+    CarWithdrawedScreen,
+    CarCheckout1Screen,
+    CarCheckout2Screen,
+    CarCheckout3Screen,
+    HomeScreen,
+    CarInfoScreen,
+    LoginScreen
+} from '../assets/images/reserve-ta-caisse';
 
 export interface Project {
     title: string,
@@ -89,9 +98,15 @@ export const projects: Project[] = [{
         'Database architecture design',
         'MySQL'
     ],
-    preview: imageComingSoon,
+    preview: CarWithdrawedScreen,
     screens: [
-        imageComingSoon
+        LoginScreen,
+        HomeScreen,
+        CarWithdrawedScreen,
+        CarInfoScreen,
+        CarCheckout1Screen,
+        CarCheckout2Screen,
+        CarCheckout3Screen
     ],
     description: '"Réserve ta caisse" helps CPAM employees with their travel.',
     seeMoreLink: 'https://reservetacaisse.cpam-versailles.fr/documentation/'
