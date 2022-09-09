@@ -8,6 +8,12 @@ import {
     CarInfoScreen,
     LoginScreen
 } from '../assets/images/reserve-ta-caisse';
+import {
+    HomeScreen as MusicallHomeScreen,
+    HomeMobileScreen,
+    RoomScreen,
+    RoomMobileScreen
+} from '../assets/images/musicall';
 
 export interface Project {
     title: string,
@@ -80,9 +86,12 @@ export const projects: Project[] = [{
         'Atomic design',
         '#TDD'
     ],
-    preview: imageComingSoon,
+    preview: MusicallHomeScreen,
     screens: [
-        imageComingSoon
+        MusicallHomeScreen,
+        RoomScreen,
+        HomeMobileScreen,
+        RoomMobileScreen
     ],
     description: "Music'all is a social platform allowing people to listen music together.",
     codeLink: 'https://github.com/PIERRONMarc/music-all/tree/develop'
