@@ -1,0 +1,12 @@
+export const BackCategoryFormScreen = require('./back-category-form.webp');
+export const BackCategoryIndexScreen = require('./back-category-index.webp');
+export const BackConsommableIndexScreen = require('./back-consommable-index.webp');
+export const FrontConsommableScreen = require('./front-consommable.webp');
+export const FrontFaqScreen = require('./front-faq.webp');
+export const FrontInformationScreen = require('./front-information.webp');
+export const FrontToolIndexScreen = require('./front-tool-index.webp');
+export const BackInformationScreen = require('./back-information.webp');
+export const BackToolIndexScreen = require('./back-tool-index.webp')
+export const BackFaqFormScreen = require('./back-faq-form.webp');
+export const BackFaqIndexScreen = require('./back-faq-index.webp');
+export const FrontCategoryIndexScreen = require('./front-category-index.webp');

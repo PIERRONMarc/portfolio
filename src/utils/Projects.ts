@@ -14,6 +14,21 @@ import {
     RoomScreen,
     RoomMobileScreen
 } from '../assets/images/musicall';
+import {
+    BackCategoryFormScreen,
+    BackCategoryIndexScreen,
+    BackConsommableIndexScreen,
+    FrontToolIndexScreen,
+    FrontInformationScreen,
+    FrontConsommableScreen,
+    FrontFaqScreen,
+    BackInformationScreen,
+    BackToolIndexScreen,
+    BackFaqFormScreen,
+    BackFaqIndexScreen,
+    FrontCategoryIndexScreen,
+
+} from '../assets/images/labboite';
 
 export interface Project {
     title: string,
@@ -59,10 +74,20 @@ export const projects: Project[] = [{
         'Docker',
         '#Responsive',
     ],
-    preview: imageComingSoon,
+    preview: FrontToolIndexScreen,
     screens: [
-        imageComingSoon,
-        imageComingSoon,
+        FrontToolIndexScreen,
+        BackToolIndexScreen,
+        FrontCategoryIndexScreen,
+        BackCategoryIndexScreen,
+        BackCategoryFormScreen,
+        FrontInformationScreen,
+        BackInformationScreen,
+        FrontConsommableScreen,
+        BackConsommableIndexScreen,
+        FrontFaqScreen,
+        BackFaqIndexScreen,
+        BackFaqFormScreen
     ],
     description: 'A website to list and present machines, tools and softwares available in LabBoîte, fablab of Cergy-Pontoise.',
     codeLink: 'https://github.com/PIERRONMarc/labboite-documentation',
@@ -138,7 +163,7 @@ export const projects: Project[] = [{
     ],
     preview: imageComingSoon,
     screens: [
-        imageComingSoon
+        imageComingSoon,
     ],
     description: 'A Symfony worker that generates OpenAPI documents based on the 3.0 OpenAPI specification.',
     codeLink: 'https://github.com/PIERRONMarc/openapi-document-generator'
