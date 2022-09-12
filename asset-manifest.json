@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3464b16b.css",
-    "main.js": "/static/js/main.068e9f69.js",
+    "main.css": "/static/css/main.eb1880c1.css",
+    "main.js": "/static/js/main.3faa2baf.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/home.webp": "/static/media/home.0e0e35418b14afdc0846.webp",
     "static/media/front-information.webp": "/static/media/front-information.b1f702b69aa8f18b2136.webp",
@@ -42,12 +42,12 @@
     "static/media/montserrat-vietnamese-400-normal.woff2": "/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
     "static/media/roboto-greek-ext-400-normal.woff2": "/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "index.html": "/index.html",
-    "main.3464b16b.css.map": "/static/css/main.3464b16b.css.map",
-    "main.068e9f69.js.map": "/static/js/main.068e9f69.js.map",
+    "main.eb1880c1.css.map": "/static/css/main.eb1880c1.css.map",
+    "main.3faa2baf.js.map": "/static/js/main.3faa2baf.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3464b16b.css",
-    "static/js/main.068e9f69.js"
+    "static/css/main.eb1880c1.css",
+    "static/js/main.3faa2baf.js"
   ]
 }
