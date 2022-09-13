@@ -75,7 +75,7 @@ export const projects: Project[] = [{
         DemandeListScreen,
         AuditEventsScreen
     ],
-    description: 'Description coming soon'
+    description: "ALOHA is a workflow to handle applications permissions requests. While still in testing phase, it will be used by many \"CPAM\" accross France. Being the first project of this scale, i learned a lot of valuable things in terms of optimisation, maintainability, testing and soft skills."
 }, {
     uri: 'labboite',
     title: 'LABBOITE',
@@ -104,7 +104,7 @@ export const projects: Project[] = [{
         BackFaqIndexScreen,
         BackFaqFormScreen
     ],
-    description: 'A website to list and present machines, tools and softwares available in LabBoîte, fablab of Cergy-Pontoise.',
+    description: 'A website to list and present machines, tools and softwares available in LabBoîte, fablab of Cergy-Pontoise. I learned to work hand to hand with a web designer to integrate the mockups he did. Me and my team were also in charge of creating the backend associated with them (mostly CRUDs i concede).',
     codeLink: 'https://github.com/PIERRONMarc/labboite-documentation',
 }, {
     uri: 'music-all',
@@ -133,7 +133,7 @@ export const projects: Project[] = [{
         HomeMobileScreen,
         RoomMobileScreen
     ],
-    description: "Music'all is a social platform allowing people to listen music together.",
+    description: "Music'all is a social platform allowing people to listen music together. Born from a need to share music with my friends, \"Music'All\" is one of my latest side projects that I use to try new concepts, techs and skills freshly learned. Being a work in progress, what you see below are mockups.",
     codeLink: 'https://github.com/PIERRONMarc/music-all/tree/develop'
 }, {
     uri: 'reserve-ta-caisse',
@@ -157,7 +157,7 @@ export const projects: Project[] = [{
         CarCheckout2Screen,
         CarCheckout3Screen
     ],
-    description: '"Réserve ta caisse" helps CPAM employees with their travel.',
+    description: "\"Réserve ta caisse\" helps CPAM employees with their travel. Available on Android and IOS, I diversified my knowledge by developing and deploying on mobile with web technologies. This project allowed to put my hand on the famous React library which i never gave up after. I also had to create the backend, an API REST consumed by the mobile app.",
     seeMoreLink: 'https://reservetacaisse.cpam-versailles.fr/documentation/'
 
 }, {
@@ -180,6 +180,6 @@ export const projects: Project[] = [{
     screens: [
         imageComingSoon,
     ],
-    description: 'A Symfony worker that generates OpenAPI documents based on the 3.0 OpenAPI specification.',
+    description: 'A Symfony worker that generates OpenAPI documents based on the 3.0 OpenAPI specification.  While i would probably do this project differently now (app is too much coupled with OpenAPI specification), I learned a lot about "Infrastructure as Code" by deploying it on AWS with Terraform. I also had the opportunity to practice Test Driven Development which has significantly change the way I see web development now.',
     codeLink: 'https://github.com/PIERRONMarc/openapi-document-generator'
 }]
