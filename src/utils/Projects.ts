@@ -29,6 +29,15 @@ import {
     FrontCategoryIndexScreen,
 
 } from '../assets/images/labboite';
+import {
+    DemandeListScreen,
+    DetailScreen,
+    AuditEventsScreen,
+    HomeScreen as ALOHAHomeScreen,
+    ProfilMetier1Screen,
+    ProfilMetier2Screen,
+    ProfilMetier3screen
+} from '../assets/images/aloha';
 
 export interface Project {
     title: string,
@@ -56,9 +65,15 @@ export const projects: Project[] = [{
         'Symfony',
         'Database architecture design'
     ],
-    preview: imageComingSoon,
+    preview: ALOHAHomeScreen,
     screens: [
-        imageComingSoon
+        ALOHAHomeScreen,
+        ProfilMetier1Screen,
+        ProfilMetier2Screen,
+        ProfilMetier3screen,
+        DetailScreen,
+        DemandeListScreen,
+        AuditEventsScreen
     ],
     description: 'Description coming soon'
 }, {
