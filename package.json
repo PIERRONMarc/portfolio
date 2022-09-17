@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@amplitude/analytics-browser": "^1.4.0",
     "@fontsource/la-belle-aurore": "^4.5.10",
     "@fontsource/montserrat": "^4.5.12",
     "@fontsource/roboto": "^4.5.8",
