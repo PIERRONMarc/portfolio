@@ -21,7 +21,18 @@ const useMousePosition = () => {
 
 function ProjectList() {
     const [hoveredProject, setHoveredProject] = useState<number>(-1);
+    const [previewShouldFadeOut, setPreviewShouldFadeOut] = useState<boolean>(false);
     const {x, y} = useMousePosition();
+
+    const onMouseEnter = (index: number) => {
+        setPreviewShouldFadeOut(false);
+        setTimeout(() => setHoveredProject(index), 150);
+    }
+
+    const onMouseLeave = () => {
+        setPreviewShouldFadeOut(true);
+        setTimeout(() => setHoveredProject(-1), 150);
+    }
 
     return (
         <div>
@@ -33,6 +44,7 @@ function ProjectList() {
                                 mousePosition={{x, y}}
                                 key={index}
                                 url={project.preview}
+                                className={previewShouldFadeOut ? 'animate-fadeout' : 'animate-fadein'}
                             />
                         )
                     }
@@ -45,11 +57,11 @@ function ProjectList() {
                         title={project.title}
                         year={project.year}
                         category={project.category}
-                        setHoveredProject={setHoveredProject}
-                        index={index}
                         tags={project.tags}
                         key={index}
                         uri={project.uri}
+                        onMouseLeave={onMouseLeave}
+                        onMouseEnter={() => onMouseEnter(index)}
                     />
                 ))}
             </div>

@@ -20,6 +20,20 @@ module.exports = {
         'primary': '#1D1D1D',
         'secondary': '#2D2D2D',
         'accent': '#F56F36',
+      },
+      keyframes: {
+        fadein: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
+        },
+        fadeout: {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 }
+        }
+      },
+      animation: {
+        fadein: 'fadein .3s linear forwards',
+        fadeout: 'fadeout .3s linear forwards'
       }
     },
   },

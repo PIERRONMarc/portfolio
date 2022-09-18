@@ -1,4 +1,4 @@
-import {Dispatch, SetStateAction} from "react";
+import {MouseEventHandler} from "react";
 import {Link} from "react-router-dom";
 import TagList from "../../molecules/TagList/TagList";
 
@@ -7,14 +7,14 @@ interface ProjectItemProps {
     year: string,
     category: 'Personal' | 'Work' | 'School',
     tags?: string[],
-    setHoveredProject: Dispatch<SetStateAction<number>>,
-    index: number,
-    uri: string
+    uri: string,
+    onMouseLeave: MouseEventHandler<HTMLDivElement>
+    onMouseEnter: MouseEventHandler<HTMLDivElement>
 }
 
 function ProjectItem(props: ProjectItemProps) {
 
-    const {title, tags, year, category, setHoveredProject, index, uri} = props;
+    const {title, tags, year, category, uri, onMouseLeave, onMouseEnter} = props;
 
     return (
         <div className="py-5 flex flex-col md:py-8">
@@ -25,8 +25,8 @@ function ProjectItem(props: ProjectItemProps) {
 
                 <div
                     className="text-5xl md:text-7xl cursor-pointer"
-                    onMouseEnter={() => setHoveredProject(index)}
-                    onMouseLeave={() => setHoveredProject(-1)}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
                 >
                     <Link to={uri} >{title}</Link>
                 </div>
