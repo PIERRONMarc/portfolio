@@ -29,11 +29,22 @@ module.exports = {
         fadeout: {
           '0%': { opacity: 1 },
           '100%': { opacity: 0 }
+        },
+        fadeinleft: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-15px)'
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)'
+          }
         }
       },
       animation: {
         fadein: 'fadein .3s linear forwards',
-        fadeout: 'fadeout .3s linear forwards'
+        fadeout: 'fadeout .3s linear forwards',
+        reveal: 'fadeinleft ease 1s forwards',
       }
     },
   },

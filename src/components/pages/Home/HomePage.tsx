@@ -9,7 +9,7 @@ import Hero from "../../molecules/Hero/Hero";
 function HomePage() {
     return (
         <>
-            <div className="container mx-auto px-4 sm:px-0 h-screen">
+            <div className="container mx-auto px-4 sm:px-0 h-screen animate-reveal">
                 <Hero />
             </div>
             <main>
